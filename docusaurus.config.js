@@ -1,11 +1,10 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (module.exports = {
-  title: '楽de朝花夕拾',
-  tagline: '世界上只有一种真正的英雄主义，那就是在认清生活真相之后依然热爱生活。',
+  title: '辽河西路18号',
+  tagline: '为了使灵魂安宁，一个人每天至少该做两件他不喜欢的事。',
   url: 'https://cloudyhope.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -21,14 +20,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
         },
         blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+          showReadingTime: false,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -41,7 +35,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: '辽河西路18号',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -51,64 +45,66 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: '技术',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          {to: '/blog', label: '杂想', position: 'left'},
         ],
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `<a href="https://beian.miit.gov.cn/">粤ICP备2021013777号</a> Copyright © ${new Date().getFullYear()} cloudyhope.com, Inc. Built with Docusaurus.`,
+        // links: [
+        //   {
+        //     title: 'Docs',
+        //     items: [
+        //       {
+        //         label: 'Tutorial',
+        //         to: '/docs/intro',
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: 'Community',
+        //     items: [
+        //       {
+        //         label: 'Stack Overflow',
+        //         href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+        //       },
+        //       {
+        //         label: 'Discord',
+        //         href: 'https://discordapp.com/invite/docusaurus',
+        //       },
+        //       {
+        //         label: 'Twitter',
+        //         href: 'https://twitter.com/docusaurus',
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: 'More',
+        //     items: [
+        //       {
+        //         label: 'Blog',
+        //         to: '/blog',
+        //       },
+        //       {
+        //         label: 'GitHub',
+        //         href: 'https://github.com/facebook/docusaurus',
+        //       },
+        //     ],
+        //   },
+        // ],
+        copyright: `<a href="https://beian.miit.gov.cn/">粤ICP备2021013777号</a>`,
       },
       prism: {
-        theme: lightCodeTheme,
+        theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      i18n: {
+        defaultLocale: 'zh-cn',
+        locales: ['en', 'zh-cn'],
+      },
+      colorMode: {
+        defaultMode: 'dark'
+      }
     }),
 });
